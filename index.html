@@ -1,56 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clases con Andrés</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #e4f0f6;
+      color: #333;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: #2b2b2b;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2b2b2b;
+      font-weight: 600;
+    }
+    main {
+      padding: 2rem;
+    }
+    #inicio {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: #f0f8ff;
+    }
+    #inicio h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #inicio p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    #inicio button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #5c6ac4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    section {
+      margin: 3rem 0;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    #testimoniosContainer {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: auto;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #5c6ac4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Encabezado de la página -->
   <header>
-    <div class="contenedor">
-      <h1>Clases con Andrésss</h1>
-      <nav>
-        <a href="#sobre-mi">Sobre ssmí</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+    <div class="logo-container">
+      <a href="#inicio">
+        <img src="img/logo.png" alt="Logo Clases con Andrés" class="logo-circular">
+      </a>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Sección principal -->
-  <main class="contenedor">
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Soy papapaAndrés Valencia, profesor con experiencia en matemáticas, física y programación. Ayudo a estudiantes a mejorar sus habilidades y superar sus retos académicos.</p>
+  <main>
+    <section id="inicio">
+      <h2>Bienvenido a mis clases</h2>
+      <p>Apoyo en matemáticas, programación y ciencias exactas. Aprende con ejemplos, ejercicios y clases dinámicas.</p>
+      <button onclick="mostrarPublicidad()">Haz clic aquí</button>
     </section>
 
     <section id="servicios">
       <h2>Servicios</h2>
       <ul>
-        <li><strong>Tutorías personalizadas:</strong> Matemáticas, Física, Programación</li>
-        <li><strong>Preparación para exámenes:</strong> Acompañamiento para aprobar tus evaluaciones</li>
-        <li><strong>Clases de refuerzo:</strong> Ayuda en temas específicos de cada asignatura</li>
+        <li>Clases virtuales</li>
+        <li>Tutorías personalizadas</li>
+        <li>Preparación para exámenes</li>
+        <li>Asesorías para proyectos</li>
       </ul>
     </section>
 
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+      <div id="testimoniosContainer">
+        <!-- Aquí se insertarán dinámicamente testimonios -->
+        <p>"Gracias a las clases con Andrés, aprobé cálculo. Muy claro para explicar!" – Juan P.</p>
+      </div>
+    </section>
+
     <section id="contacto">
-      <h2>Contacto</h2>
-      <form id="formulario-contacto">
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="email" placeholder="Tu correo" required />
-        <textarea placeholder="¿Cómo te puedo ayudar?" required></textarea>
-        <button type="submit">Enviar mensaje</button>
+      <h2>Contáctame</h2>
+      <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        
+        <label for="email">Correo:</label>
+        <input type="email" id="email" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="5" required></textarea>
+        
+        <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
-  <!-- Pie de página -->
   <footer>
-    <p>&copy; 2025 Andrés Valencia | Clases y Tutorías</p>
+    <p>© 2025 Clases con Andrés</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function mostrarPublicidad() {
+      alert("Gracias por visitar. Contáctame para una clase gratuita de prueba.");
+    }
+  </script>
 </body>
 </html>
