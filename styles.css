@@ -68,7 +68,7 @@ body {
     padding: 10px 0;
   }
 
-  .logo-circular {
+  logo-circular {
     height: 60px;
     width: 60px;
     object-fit: cover;
@@ -76,7 +76,7 @@ body {
     display: block;
   }
   
-  .logo-container {
+  logo-container {
     display: flex;
     align-items: center;
   }
