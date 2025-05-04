@@ -21,9 +21,10 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;  /* Cambiado de center a flex-start */
   gap: 1rem;
 }
+
 .titulo-logo {
   font-size: 1.5rem;
   color: #2b2b2b;
@@ -37,7 +38,6 @@ header {
   border-radius: 50%;
   border: 2px solid black;
 }
-
 /* NAVIGATION STYLING */
 nav ul {
   list-style: none;
