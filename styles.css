@@ -34,7 +34,7 @@ header {
   width: 70px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid black;
 }
 
 /* NAVIGATION STYLING */
